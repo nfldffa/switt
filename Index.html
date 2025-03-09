@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JasaBeliKelapaSawit_ | Beranda</title>
+    <link rel="stylesheet" href="css/Navbar.css">
+    <link rel="stylesheet" href="css/Beranda.css">
+    <script src="/js/pajero.js" defer></script>
+    <script src="/js/imgberanda.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="Index.html">Jasabelikecambahsawit_</a>
+        </h1>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="Index.html">Beranda</a></li>
+                <li><a href="Perusahaan.html">Perusahaan</a></li>
+                <li><a href="Sales.html">Sales</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Metode.html">Metode Pembayaran</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <section class="intro" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0">
+        <h2>Selamat Datang di Jasa Beli Kelapa Sawit</h2>
+        <p>Situs terpercaya untuk jual beli kelapa sawit berkualitas tinggi dengan harga terbaik.</p>
+        <p>✅ Harga Kompetitif | ✅ Kualitas Terjamin | ✅ Transaksi Aman & Mudah</p>
+    </section>
+
+    <div class="carousel-container" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0">
+        <div class="carousel-slide">
+            <img src="image/1.jpg" alt="Slide 1">
+            <img src="image/5.jpg" alt="Slide 2">
+            <img src="image/3.jpg" alt="Slide 3">
+            <img src="image/2.jpg" alt="Slide 4">
+            <img src="image/4.jpg" alt="Slide 5">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <section class="sawit">
+        <div class="sawit-container" id="sawit-container">
+        </div>
+    </section>
+
+    <a href="https://wa.me/6282282032130" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 700, // Durasi animasi dalam milidetik
+                easing: "ease-in-out", // Efek animasi
+                once: true, // Animasi hanya berjalan sekali saat scroll
+                mirror: false, // Tidak mengulang animasi ketika scrolling ke atas
+            });
+        });
+
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
+
+
+</body>
+
+</html>
