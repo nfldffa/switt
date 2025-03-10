@@ -5,13 +5,12 @@
 }
 
 html, body {
-  overflow-x: hidden; /* Mencegah pembesaran horizontal */
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  will-change: transform;
 }
 
 body {
@@ -40,13 +39,10 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transform: translateY(50px);
-  will-change: transform, opacity;
 }
 
-@supports (backdrop-filter: blur(10px)) {
-  .product-card {
-    backdrop-filter: blur(10px);
-  }
+.product-card {
+    background: rgba(236, 223, 204, 0.98);
 }
 
 .card-header {
@@ -126,10 +122,8 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  /* Ubah properti di bawah agar tombol langsung terlihat */
   opacity: 1;
   transform: scale(1);
-  will-change: transform, opacity;
   transition: all 0.3s ease;
 }
 
