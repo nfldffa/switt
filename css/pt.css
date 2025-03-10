@@ -13,7 +13,7 @@ html, body {
   overflow-y: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
               url('../image/bg.webp') no-repeat center center fixed;
-  background-size: cover;
+              background-size: 100% auto;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -37,10 +37,6 @@ html, body {
   opacity: 0;
   transform: translateY(50px);
   overflow: hidden;
-}
-
-.product-card {
-    background: rgba(236, 223, 204, 0.98);
 }
 
 .card-header {
@@ -148,7 +144,14 @@ html, body {
 }
 
 
-@media (max-width: 768px) {
+
+  @media (max-width: 768px) { 
+    html, body {
+      background-size: cover; /* Pastikan background tetap menyesuaikan ukuran layar */
+      background-attachment: scroll; /* Hindari efek membesar saat scroll */
+      background-position: center top; /* Atur posisi agar tetap rapi */
+    }
+
   .product-card {
     padding: 1.5rem;
   }
