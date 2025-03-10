@@ -11,7 +11,7 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: url('../image/lonsum.jpeg') no-repeat center center fixed;
+  background: #464E2E no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
