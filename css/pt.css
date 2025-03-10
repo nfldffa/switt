@@ -12,7 +12,7 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('../image/bg.jpg') no-repeat center center fixed;
+              url('../image/bg.webp') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

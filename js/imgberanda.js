@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const sawitContainer = document.getElementById("sawit-container");
 
   const gambarList = [
-      "image/p1.jpg",
-      "image/p2.jpg",
-      "image/p3.jpg",
-      "image/p4.jpg",
-      "image/p5.jpg",
-      "image/p6.jpg"
+      "image/p1.webp",
+      "image/p2.webp",
+      "image/p3.webp",
+      "image/p4.webp",
+      "image/p5.webp",
+      "image/p6.webp"
   ];
 
   gambarList.forEach(src => {
