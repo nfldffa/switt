@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const gambarContainer = document.getElementById("gambar-container");
 
   const gambarList = [
-      { src: "image/lonsum.jpeg", caption: "PT. Perusahaan Perkebunan London Sumatra Indonesia, Tbk" , link: "/perusahaan/lonsum.html"},
+      { src: "image/lonsum.jpeg", caption: "PT. Perusahaan Perkebunan London Sumatra Indonesia, Tbk" , link: "lonsum.html"},
       { src: "image/dami.png", caption: "PT. Dami Mas Sejahtera" , link: "dami.html"},
       { src: "image/bakrie.jpg", caption: "PT. ASD-Bakrie Oil Palm Seed Indonesia" , link: "bakrie.html"},
       { src: "image/ehsan.png", caption: "PT. Sasaran Ehsan Mekarsari" , link: "ehsan.html"},
