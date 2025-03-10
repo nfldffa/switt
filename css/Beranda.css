@@ -1,9 +1,15 @@
 html, body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #ECDFCC;
-  scroll-behavior: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../image/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .intro {
@@ -16,13 +22,13 @@ html, body {
 
 .intro h2 {
   font-size: 2em;
-  color: #2e7d32;
+  color: #FFD700;
   margin-bottom: 10px;
 }
 
 .intro p {
   font-size: 1.2em;
-  color: #555;
+  color: white;
   margin: 5px 0;
 }
 
@@ -64,8 +70,8 @@ button.next { right: 10px; }
 .gambar-sawit {
   width: 400px; /* Atur ukuran gambar */
   height: 300px;
-  margin: 5px; /* Beri jarak antar gambar */
-  margin-top: 4.5rem;
+  margin: 2rem; /* Beri jarak antar gambar */
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px; /* Agar gambar punya sudut melengkung */
@@ -77,13 +83,6 @@ button.next { right: 10px; }
   grid-template-columns: repeat(3, 1fr); /* 3 gambar per baris */
   gap: 0; /* Jarak antar gambar */
   justify-items: center; /* Pusatkan gambar di dalam grid */
-}
-
-.gambar-sawit {
-  width: 400px; /* Atur ukuran gambar */
-  height: 300px;
-  border-radius: 10px; /* Sudut melengkung */
-  transition: transform 0.3s ease;
 }
 
 .gambar-sawit:hover {
@@ -128,11 +127,6 @@ button.next { right: 10px; }
 .whatsapp-btn {
   animation: bounce 1.5s infinite ease-in-out;
 }
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   .menu-toggle {

@@ -1,3 +1,18 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../image/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -27,19 +42,19 @@
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #2c3e50;
+  border: 5px solid #007bff;
   animation: float 4s ease-in-out infinite;
 }
 
 .profile-info h2 {
-  color: #2c3e50;
+  color: #FFD700;
   font-size: 2.2em;
   margin-bottom: 10px;
   position: relative;
 }
 
 .position {
-  color: #464E2E;
+  color: #FFD700;
   font-weight: 600;
   font-size: 1.2em;
   margin-bottom: 20px;
@@ -50,7 +65,23 @@
   align-items: center;
   gap: 10px;
   margin: 12px 0;
-  color: #555;
+  color: white;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 4rem;
+}
+
+.social-links a {
+  color: #007bff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FFD700;
 }
 
 .sales-details {
@@ -58,14 +89,15 @@
   grid-template-columns: 1fr 2fr;
   gap: 40px;
   margin-top: 30px;
+  color: white;
 }
 
 .experience-item {
-  background: #f8f9fa;
+  background: #464E2E;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  border-left: 4px solid #464E2E;
+  border-left: 4px solid #FFD700;
   transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -90,7 +122,7 @@
   content: "▹";
   position: absolute;
   left: 0;
-  color: #3498db;
+  color: #007bff;
 }
 
 /* Keyframes untuk animasi */
