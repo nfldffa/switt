@@ -131,7 +131,7 @@ button.next { right: 10px; }
 @media screen and (max-width: 768px) {
   .menu-toggle {
       display: flex;
-      margin-right: 1.5rem ;
+      margin-right: 0.75rem ;
   }
 
   .logo {
@@ -208,34 +208,6 @@ button.next { right: 10px; }
     width: 160px; /* Kurangi ukuran gambar agar sesuai */
     height: 140px;
     margin: 3px;
-  }
-}
-
-@media (max-width: 390px) {
-  .menu-toggle {
-    display: flex;
-    margin-right: 5rem; 
-  }
-
-  .logo {
-    font-size: large; 
-    font-weight: 900; 
-  }
-}
-
-@media (max-width: 360px) {
-  .navbar {
-    padding: 0 0.5rem; /* Kurangi padding agar lebih pas */
-  }
-
-  .logo {
-    font-size: large; /* Perkecil ukuran logo */
-    font-weight: 900; /* Kurangi ketebalan sedikit */
-  }
-
-  .menu-toggle {
-    margin-right: 4rem; /* Tetap dorong menu ke kanan */
-    transform: scale(0.9); /* Perkecil sedikit ikon menu */
   }
 }
 
