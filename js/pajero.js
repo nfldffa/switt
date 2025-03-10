@@ -12,15 +12,24 @@ const nextButton = document.querySelector(".next");
 let autoSlideInterval;
 
 // ========== Menu Aktif Saat Halaman Dikunjungi ==========
-const currentLocation = window.location.pathname.split("/").pop();
-const menuItems = document.querySelectorAll("#nav-menu li a");
-
-menuItems.forEach((item) => {
-  if (item.getAttribute("href") === currentLocation) {
-    item.classList.add("active");
-  }
-});
-
+(function setActiveMenu() {
+  const { pathname } = window.location;
+  const menuLinks = document.querySelectorAll('#nav-menu a[href]');
+  
+  // Handle homepage special case
+  const currentPath = pathname === '/' ? 'index.html' : pathname.split('/').pop();
+  
+  menuLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname.split('/').pop();
+    const isActive = linkPath === currentPath || 
+                     (currentPath === 'index.html' && linkPath === '');
+    
+    link.classList.toggle('active', isActive);
+    
+    // Optional: Tambahkan aria-current untuk aksesibilitas
+    link.setAttribute('aria-current', isActive ? 'page' : null);
+  });
+})();
 // Fungsi untuk memperbarui tampilan slide
 function updateSlide() {
   slides.style.transform = `translateX(-${slideIndex * 100}%)`;
