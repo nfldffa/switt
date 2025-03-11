@@ -16,6 +16,7 @@ html, body {
               background-size: 100% auto;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overscroll-behavior: none;
 }
 
 .container {

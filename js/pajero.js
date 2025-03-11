@@ -1,7 +1,25 @@
 function toggleMenu() {
-  const nav = document.getElementById('nav-menu');
-  nav.classList.toggle('active');
+  const navMenu = document.getElementById('nav-menu');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  if (navMenu && menuToggle) {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  } else {
+    console.warn("Elemen nav-menu atau menu-toggle tidak ditemukan!");
+  }
 }
+
+ // Tutup menu mobile saat klik di luar
+ document.addEventListener('click', (e) => {
+  const navMenu = document.getElementById('nav-menu');
+  const menuToggle = document.querySelector('.menu-toggle');
+  
+  if (navMenu && menuToggle && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+  }
+});
 
 let slideIndex = 0;
 const slides = document.querySelector(".carousel-slide");
