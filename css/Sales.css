@@ -28,7 +28,8 @@ html, body {
 .sales-content {
   padding: 80px 20px 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto ;
+  margin-bottom: 3rem;
 }
 
 .profile-header {
