@@ -64,7 +64,7 @@ html, body {
   gap: 2rem;
   flex-wrap: wrap;
   border-radius: 5px;
-  
+  margin-bottom: 3rem;
 }
 
 .resep img {

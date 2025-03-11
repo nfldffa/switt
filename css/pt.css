@@ -38,6 +38,7 @@ html, body {
   opacity: 0;
   transform: translateY(50px);
   overflow: hidden;
+  margin-bottom: 3rem;
 }
 
 .card-header {

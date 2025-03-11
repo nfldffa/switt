@@ -84,6 +84,7 @@ button.next { right: 10px; }
   grid-template-columns: repeat(3, 1fr); /* 3 gambar per baris */
   gap: 0; /* Jarak antar gambar */
   justify-items: center; /* Pusatkan gambar di dalam grid */
+  margin-bottom: 3rem;
 }
 
 .gambar-sawit:hover {
