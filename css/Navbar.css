@@ -98,6 +98,10 @@ nav ul li a:active {
 }
 
 @media screen and (max-width: 768px) {
+  html, body {
+    overscroll-behavior: contain;
+  }
+
   .menu-toggle {
       display: flex;
       margin-right: 1.5rem ;
@@ -129,6 +133,10 @@ nav ul li a:active {
 }
 
 @media (max-width: 390px) {
+  html, body {
+    overscroll-behavior: contain;
+  }
+
   .menu-toggle {
     display: flex;
     margin-right: 5rem; 
@@ -153,6 +161,10 @@ nav ul li a:active {
 }
 
 @media (max-width: 360px) {
+  html, body {
+    overscroll-behavior: contain;
+  }
+
   .navbar {
     padding: 0 0.5rem; /* Kurangi padding agar lebih pas */
   }
