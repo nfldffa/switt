@@ -138,6 +138,18 @@ nav ul li a:active {
     font-size: large; 
     font-weight: 900; 
   }
+  
+  .product-card {
+    margin-bottom: 3rem;
+  }
+
+  #sawit-container {
+    margin-bottom: 3rem;
+  }
+
+  .resep-container {
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width: 360px) {
@@ -153,5 +165,17 @@ nav ul li a:active {
   .menu-toggle {
     margin-left: 4rem; /* Tetap dorong menu ke kanan */
     transform: scale(0.9); /* Perkecil sedikit ikon menu */
+  }
+
+  .product-card {
+    margin-bottom: 3rem;
+  }
+
+  #sawit-container {
+    margin-bottom: 3rem;
+  }
+
+  .resep-container {
+    margin-bottom: 3rem;
   }
 }
