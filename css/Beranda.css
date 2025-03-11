@@ -204,6 +204,7 @@ button.next { right: 10px; }
     grid-template-columns: repeat(2, 1fr); /* 2 gambar per baris */
     gap: 10px; /* Tambahkan sedikit jarak antar gambar */
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .gambar-sawit {

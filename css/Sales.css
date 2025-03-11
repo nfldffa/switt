@@ -177,6 +177,10 @@ html, body {
     margin: 15px 0;
     padding: 15px;
   }
+
+  .sales-content {
+    margin-bottom: 3rem;
+  }
 }
 
 /* Pastikan animasi hanya bekerja ketika diperlukan */
