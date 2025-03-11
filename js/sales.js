@@ -4,35 +4,29 @@
 function initScrollAnimations() {
   const observerOptions = {
     threshold: 0.2,
-    rootMargin: '0px'
+    rootMargin: '-10% 0px'
   };
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Gunakan GSAP untuk animasi yang lebih stabil
         gsap.to(entry.target, {
           duration: 0.8,
           opacity: 1,
           y: 0,
-          ease: "power3.out",
-          onComplete: () => {
-            observer.unobserve(entry.target);
-          }
+          ease: "power3.out"
         });
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Inisialisasi element yang perlu diobservasi
-  document.querySelectorAll('.animate-on-scroll').forEach(element => {
-    // Set initial state melalui GSAP
-    gsap.set(element, {
-      opacity: 0,
-      y: 30
-    });
-    observer.observe(element);
-  });
+  // Set opacity dan posisi awal hanya jika elemen ada
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  if (elements.length > 0) {
+    gsap.set(elements, { opacity: 0, y: 30 });
+    elements.forEach(element => observer.observe(element));
+  }
 }
 
 // Animasi Hover untuk Experience Item
@@ -60,7 +54,6 @@ function initHoverAnimations() {
 
 // Animasi Load Awal dengan GSAP
 function initPageLoadAnimations() {
-  // Animasi untuk element utama
   gsap.from('.profile-header', {
     duration: 1,
     opacity: 0,
@@ -73,20 +66,23 @@ function initPageLoadAnimations() {
 function toggleMenu() {
   const navMenu = document.getElementById('nav-menu');
   const menuToggle = document.querySelector('.menu-toggle');
-  
-  navMenu.classList.toggle('active');
-  menuToggle.classList.toggle('active');
+
+  if (navMenu && menuToggle) {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  } else {
+    console.warn("Elemen nav-menu atau menu-toggle tidak ditemukan!");
+  }
 }
 
-// Inisialisasi
+// Inisialisasi saat DOM siap
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize animations
-  initScrollAnimations();
-  initHoverAnimations();
-  
-  // Jalankan GSAP animations
-  if (typeof gsap !== 'undefined') {
+  if (window.gsap) {
+    initScrollAnimations();
+    initHoverAnimations();
     initPageLoadAnimations();
+  } else {
+    console.error("GSAP tidak ditemukan! Pastikan GSAP sudah di-load.");
   }
 
   // Tutup menu mobile saat klik di luar
@@ -94,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const menuToggle = document.querySelector('.menu-toggle');
     
-    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    if (navMenu && menuToggle && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
       navMenu.classList.remove('active');
       menuToggle.classList.remove('active');
     }
