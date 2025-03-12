@@ -1,0 +1,110 @@
+.payment-section {
+  padding: 50px 20px;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.payment-grid > :nth-child(4) {
+  grid-column: 2 / 1;
+}
+
+.payment-grid > :nth-child(5) {
+  grid-column: 2 / 4;
+}
+
+
+
+.payment-card {
+  background: linear-gradient(135deg, #464E2E, #ECDFCC, #FFD700);
+  background-size: 400% 400%;
+  animation: movingGradient 6s infinite linear;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi Gradient Bergerak */
+@keyframes movingGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efek Hover */
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.6); /* Glow Emas Lebih Terang */
+}
+
+
+/* Efek Garis Glow */
+.payment-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.payment-card:hover::before {
+  opacity: 1;
+  transform: rotate(30deg);
+}
+
+
+.payment-logo {
+  height: 60px;
+  width: auto;
+  margin: 0 auto 20px;
+  display: block;
+  object-fit: contain;
+}
+
+.payment-card h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.payment-detail {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95em;
+  padding: 0 15px;
+}
+
+
+@media (max-width: 768px) {
+  .payment-grid {
+    grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+    gap: 15px;
+    margin-top: 6rem;
+  }
+
+  .payment-grid > :nth-child(4),
+  .payment-grid > :nth-child(5) {
+    grid-column: auto; /* Mengembalikan ke tata letak default */
+    justify-self: center; /* Pastikan item tetap di tengah */
+  }
+  
+  .payment-card {
+    min-width: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

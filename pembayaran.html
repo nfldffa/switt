@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="css/Navbar.css">
+  <link rel="stylesheet" href="css/Beranda.css">
+  <link rel="stylesheet" href="css/Pembayaran.css">
+  <script src="js/pajero.js" defer></script>
+  <title>JasaBeliKelapaSawit_ | Metode Pembayaran</title>
 </head>
 <body>
+  <header>
+    <h1 class="logo">
+        <a href="index.html">Jasabelikecambahsawit_</a>
+    </h1>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="perusahaan.html">Perusahaan</a></li>
+            <li><a href="sales.html">Sales</a></li>
+            <li><a href="pembayaran.html">Metode Pembayaran</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <!-- Tambahkan di bagian body setelah header -->
+  <section class="payment-section">  
+      <div class="payment-grid">
+        <!-- Bank BSI -->
+        <div class="payment-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bank_Syariah_Indonesia.svg/2560px-Bank_Syariah_Indonesia.svg.png" 
+               alt="BSI Logo" class="payment-logo">
+          <h3>Bank Syariah Indonesia (BSI)</h3>
+          <div class="payment-detail">
+            <strong>No. Rekening:</strong> 7201348734<br>
+            <strong>Atas Nama:</strong> ASTIA SALSABIL
+          </div>
+        </div>
   
+        <!-- Bank BCA -->
+        <div class="payment-card">
+          <img src="https://vectorez.biz.id/wp-content/uploads/2023/10/Logo-Bank-Central-Asia-BCA.png" 
+               alt="BCA Logo" class="payment-logo">
+          <h3>Bank Central Asia (BCA)</h3>
+          <div class="payment-detail">
+            <strong>No. Rekening:</strong> 7391912550<br>
+            <strong>Atas Nama:</strong> ASTIA SALSABIL
+          </div>
+        </div>
+  
+        <!-- Dana -->
+        <div class="payment-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" 
+               alt="Dana Logo" class="payment-logo">
+          <h3>DANA</h3>
+          <div class="payment-detail">
+            <strong>Nomor:</strong> 082282032130<br>
+            <strong>Atas Nama:</strong> ASTIA SALSABIL
+          </div>
+        </div>
+  
+        <!-- Gopay -->
+        <div class="payment-card">
+          <img src="https://antinomi.org/wp-content/uploads/2022/03/logo-gopay-vector.png" 
+               alt="Gopay Logo" class="payment-logo">
+          <h3>Gopay</h3>
+          <div class="payment-detail">
+            <strong>Nomor:</strong> 082282032130<br>
+            <strong>Atas Nama:</strong> ASTIA SALSABIL
+          </div>
+        </div>
+  
+        <!-- ShopeePay -->
+        <div class="payment-card">
+          <img src="https://seeklogo.com/images/S/shopeepay-logo-11DACD6CCF-seeklogo.com.png" 
+               alt="ShopeePay Logo" class="payment-logo">
+          <h3>ShopeePay</h3>
+          <div class="payment-detail">
+            <strong>Nomor:</strong> 08228203210<br>
+            <strong>Atas Nama:</strong> ASTIA SALSABIL
+          </div>
+        </div>
+      </div>
+  </section>
+  
+
 </body>
 </html>
