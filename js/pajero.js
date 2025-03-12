@@ -10,16 +10,28 @@ function toggleMenu() {
   }
 }
 
- // Tutup menu mobile saat klik di luar
- document.addEventListener('click', (e) => {
+// Tutup menu mobile saat klik di luar
+document.addEventListener('click', (e) => {
   const navMenu = document.getElementById('nav-menu');
   const menuToggle = document.querySelector('.menu-toggle');
-  
+
   if (navMenu && menuToggle && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
     navMenu.classList.remove('active');
     menuToggle.classList.remove('active');
   }
 });
+
+// Tutup menu saat halaman dimuat ulang atau kembali ke halaman sebelumnya
+document.addEventListener("DOMContentLoaded", () => {
+  const navMenu = document.getElementById("nav-menu");
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  if (navMenu && menuToggle) {
+    navMenu.classList.remove("active");
+    menuToggle.classList.remove("active");
+  }
+}); // <-- Menutup kurung yang hilang
+
 
 let slideIndex = 0;
 const slides = document.querySelector(".carousel-slide");
