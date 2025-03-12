@@ -100,11 +100,5 @@
   .payment-grid > :nth-child(5) {
     grid-column: auto; /* Mengembalikan ke tata letak default */
     justify-self: center; /* Pastikan item tetap di tengah */
-  }
-  
-  .payment-card {
-    min-width: auto;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+  }  
 }
