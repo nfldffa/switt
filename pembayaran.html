@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/Beranda.css">
   <link rel="stylesheet" href="css/Pembayaran.css">
   <script src="js/pajero.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <title>JasaBeliKelapaSawit_ | Metode Pembayaran</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
 
   <!-- Tambahkan di bagian body setelah header -->
   <section class="payment-section">  
-      <div class="payment-grid">
+      <div class="payment-grid" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0">
         <!-- Bank BSI -->
         <div class="payment-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bank_Syariah_Indonesia.svg/2560px-Bank_Syariah_Indonesia.svg.png" 
@@ -90,6 +91,28 @@
       </div>
   </section>
   
+  <a href="https://wa.me/6282282032130" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+            duration: 700, // Durasi animasi dalam milidetik
+            easing: "ease-in-out", // Efek animasi
+            once: true, // Animasi hanya berjalan sekali saat scroll
+            mirror: false, // Tidak mengulang animasi ketika scrolling ke atas
+        });
+    });
+
+    window.onload = function () {
+        window.scrollTo(0, 0);
+    };
+
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+</script>
 </body>
 </html>
